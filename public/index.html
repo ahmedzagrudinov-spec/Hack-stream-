@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Hack Stream</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .flash {
+            animation: flash 0.5s;
+        }
+
+        @keyframes flash {
+            0% { background: black; }
+            50% { background: green; }
+            100% { background: black; }
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #leaderboard {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>ВЗЛОМАЙ СИСТЕМУ</h1>
+
+<div id="hints"></div>
+
+<input id="username" placeholder="Ник">
+<input id="code" placeholder="Код">
+<button onclick="send()">Взломать</button>
+
+<p id="status"></p>
+
+<h3>Топ игроков</h3>
+<ul id="leaderboard"></ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
